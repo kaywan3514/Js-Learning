@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Impact, sans-serif;
+  box-sizing: border-box;
+}
+.eshtrak {
+  border-radius: 0.2rem;
+}
+/* .flex-container {
+  width: 30rem;
+  background-color: aqua;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex; */
+/* flex-direction: column-reverse; */
+/* flex-wrap: wrap; */
+/* 
+  .flex-itam {
+    width: 7rem;
+    height: 6rem;
+    background-color: rgb(240, 236, 99);
+    margin: 0.5rem;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 6rem;
+  }
+} */
+/* end part 2 */
+
+/* .flex-container {
+  width: 30rem;
+  height: 32rem;
+  background-color: rgb(62, 37, 172);
+  margin: 2rem auto;
+  display: flex; */
+/* align-items: baseline; */
+/* justify-content: space-around; */
+
+/* .flex-itam {
+    display: flex;
+    width: 7rem;
+    height: 6rem;
+    background-color: rgb(240, 236, 99);
+    font-size: 3rem; */
+/* بجای این لاین هایت و تکست از فلکس استفاده میکنیم  */
+/* text-align: center;
+    line-height: 6rem; */
+/* justify-content: center;
+    align-items: center;
+  } */
+/* .box1{
+    font-size: 0.5rem;
+  }
+  .box3{
+    font-size: 1.5rem;
+  }} */
+/* end part 4 */
+/* .flex-container {
+  width: 20rem;
+  height: 30rem;
+  background-color: rgb(15, 182, 51);
+  margin: 2rem auto;
+  display: flex;
+  /* align-content: center;
+  flex-wrap: wrap; */
+/* .flex-itam {
+    display: flex;
+    width: 7rem; */
+/* height: 6rem; */
+/* background-color: rgb(240, 236, 99);
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+  }}  */
+/* end part 5 */
+/* .flex-container { */
+/* width: 50rem; */
+/* width: 20rem;
+  height: 30rem;
+  background-color: rgb(15, 182, 51);
+  margin: 2rem auto;
+  display: flex; */
+/* فضای اضافی تقسیم میشه میون تمامی ایتم ها  */
+/* برای بحث شرینک ویدز کانتینر رو پایین بیارید */
+/* flex-shrink: 0; */
+/* .flex-itam {
+    display: flex;
+    width: 7rem;
+    height: 6rem;
+    background-color: rgb(240, 236, 99);
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    
+  } */
+/* order:: */
+/* .box1,.box3,.box5{
+    background-color: brown;
+    order: -1;
+  } */
+/* flex-shrink & flex-grow :: */
+/* فضارو اختصاص بدیم به یکی از ایتم ها */
+/* .box3{
+    flex-grow: 1;
+   } */
+/* نسبت به بقیه ایتم ها 3برابر بشه :: */
+/* .box1{
+    flex-grow: 3;
+   } */
+/* بحث شرینک */
+/* .box2{
+    flex-shrink: 2;
+   }} */
+
+/* part 8 : flex-basis ::: */
+/* .flex-container {
+  width: 30rem;
+  height: 32rem;
+  background-color: rgb(62, 37, 172);
+  margin: 2rem auto;
+  display: flex; */
+
+  /* استفاده از فلکس بیسیز بجای ویدز */
+  /* max-width && min-width && flex-basis: auto _ 0  */
+  /* .flex-itam {
+    display: flex;
+    flex-basis: 8rem;
+    height: 6rem;
+    background-color: rgb(240, 236, 99);
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .flex-itam:nth-child(odd) {
+    background-color: aqua;
+  }} */
+
+/* align-self :: part 9 :: */
+.flex-container {
+  width: 30rem;
+  height: 32rem;
+  background-color: rgb(62, 37, 172);
+  margin: 2rem auto;
+  display: flex;
+
+  .flex-itam {
+    display: flex;
+    flex-basis: 8rem;
+    height: 6rem;
+    background-color: rgb(240, 236, 99);
+    font-size: 3rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
