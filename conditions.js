@@ -11,7 +11,7 @@
 // }
 
 // تمرین دوم : سبد خرید با 3محصول مجموع قیمت بیش از 100 بود یه تخفیفی بده:
-// var product = [
+// var cart = [
 //   {
 //     name: 'iphone17pro',
 //     price: 50, // 50
@@ -28,7 +28,7 @@
 //     color: 'white',
 //   },
 // ];
-// var aveRage=product[0].price + product[1].price + product[2].price ;
+// var aveRage=cart[0].price + cart[1].price + cart[2].price ;
 // console.log(aveRage);
 // console.log(aveRage >= 100 ? "You are eligible for a discount code" : "Not a Discount Code")
 
