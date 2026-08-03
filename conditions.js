@@ -76,34 +76,127 @@
 // }
 
 
+// تمرینات جلسه 16 : به روش کلاس :::
+// تمرین اول :
+// var max = null;
+// var min = null;
+// var numbers = [3, 5, 8, 4, 20, -21, 2, 7, 25, 31, 19, 42];
+// for (i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 === 0) {
+//     if (max === null || numbers[i] > max) {
+//       max = numbers[i];
+//     }
+//   } else {
+//     if (min === null || numbers[i] < min) {
+//       min = numbers[i];
+//     }
+//   }
+// }
+// console.log('MAX : ' + ' ' + max);
+// console.log('MIN', min);
 
-// تمرینات جلسه 16 : تمرین اول :::
-// ارایه ای از اعداد داریم .بزرگترین عدد زوج و کوچکترین عدد فرد چاپ شود ::
-var array1 = [5, 10, 88, 7, 18, 3, 22,1];
-var max = array1[0];
-var min = array1[0];
-for (i = 0; i < array1.length; i++) {
-  if (array1[i] % 2 === 0) {
-    console.log(array1[i]);
-    max = Math.max(max, array1[i]);
-  } else {
-    if (array1[i] % 2 === 1) {
-      console.log(array1[i]);
-      min = Math.min(min, array1[i]);
+// تمرین دوم :: جلسه 16 :
+// var count = {
+//   5: 2,
+//   2: 3,
+//   17: 2,
+//   20: 1,
+// };
+// console.log(count[2]);
+// count[5] = 10;
+// console.log(count)
+// var count = 0;
+// var count = {};
+// var numbers1 = [5, 2, 20, 5, 1, 2, 17, 2, 3, 17 ];
+// for (i = 0; i < numbers1.length; i++) {
+// if (numbers1[i] === 17) {
+//   console.log(numbers1[i]);
+//   count++;
+// }
+
+// if (count[numbers1[i]]) {
+// count[numbers1[i]] += 1;
+// count[numbers1[i]] = count[numbers1[i]] +1 ;
+
+// } else {
+// count[numbers1[i]] = 1;
+// }
+// }
+// console.log(count);
+
+
+// تمرینات جلسه 17 ::::: 
+// تمرین اول ::: 3 ورودی فانکشن کلکیولیت  :
+function calculate(num1 , num2 , operation){
+switch (operation) {
+    case "+":
+        return num1 + num2
+        break;
+    case "-":
+        return num1 - num2
+        break;
+        case "*":
+        return num1 * num2
+        break;
+        case "/":
+            if(num2 === 0){
+              console.log("!تقسیم بر صفر مجاز نیست")
+            }
+        return num1 / num2
+        break;
+    default:
+        console.log("عملگر معتبر نیست")
+        break;
+}
+}
+console.log(calculate(4,2,"+"))
+console.log(calculate(2,4,"-"))
+console.log(calculate(4,2,"*"))
+console.log(calculate(8,0,"/"))
+console.log(calculate(7,8,"$"))
+
+// تمرین 2 : آبجکت استودنت  ::
+var students = [
+  { name: 'ali', score: [2, 18, 14, 15] },
+  { name: 'reza', score: [17, 19, 7, 13] },
+];
+// به دست اوردن میانگین دانش آموزان با فانکشن
+function averageStudent(students) {
+  var sumAve = 0;
+  for (var i = 0; i < students.score.length; i++) {
+    sumAve = sumAve + students.score[i];
+  }
+  return sumAve / students.score.length;
+}
+console.log(averageStudent(students[0]));
+
+// فانکشن بهترین دانش آموز
+function getBestStudent(stud) {
+  var best = 0;
+  var topAverage = averageStudent(stud[0]);
+
+  for (var i = 1; i < stud.length; i++) {
+    var cuurentAve=averageStudent(stud[i]);
+    if (cuurentAve > topAverage) {
+      topAverage = cuurentAve;
+      best = i;
     }
   }
+  return {
+    name: students[best].name,
+    averageStudent: topAverage.toFixed(2),
+  };
 }
-console.log(max);
-console.log(min);
 
-
-// تمرین دوم ::
-// ارایه ای از اعداد داریم . هرعدد چندبار تکرار شده است ؟
-var array2 = [2, 10, 5, 2, 3, 10];
-for (var i = 0; i < array2.length; i++) {
-  for (var j = i + 1; j < array2.length; j++) {
-    if (array2[i] == array2[j]) {
-      console.log(array2[i]);
-    }
-  }
+// نمایش میانگین هر کاربر
+for (var i = 0; i < students.length; i++) {
+  console.log(
+    `${students[i].name} : میانگین =  ${averageStudent(students[i]).toFixed(2)}`,
+  );
 }
+
+// پیدا کردن و نمایش بهترین دانش آموز :
+
+var bestStu = getBestStudent(students);
+console.log(`بهترین دانش آموز : ${bestStu.name}  با میانگین  ${bestStu.averageStudent} `)
+
