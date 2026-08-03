@@ -125,7 +125,7 @@
 // console.log(count);
 
 
-// تمرینات جلسه 17 ::::: 
+// تمرینات جلسه 17 ::::::: 
 // تمرین اول ::: 3 ورودی فانکشن کلکیولیت  :
 function calculate(num1 , num2 , operation){
 switch (operation) {
@@ -159,6 +159,7 @@ console.log(calculate(7,8,"$"))
 var students = [
   { name: 'ali', score: [2, 18, 14, 15] },
   { name: 'reza', score: [17, 19, 7, 13] },
+  { name: 'farzane', score: [20, 9, 16, 12] },
 ];
 // به دست اوردن میانگین دانش آموزان با فانکشن
 function averageStudent(students) {
@@ -169,6 +170,7 @@ function averageStudent(students) {
   return sumAve / students.score.length;
 }
 console.log(averageStudent(students[0]));
+console.log(averageStudent(students[2]));
 
 // فانکشن بهترین دانش آموز
 function getBestStudent(stud) {
